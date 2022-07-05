@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+        
+    <!--        
+        Nama : Akbar Firman Syah
+        NIM : 203140914111071
+        Kelas : SI 3C
+    -->
+        
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Formulir</title>
+</head>
+<body>
+    <script lang="JavaScript">
+    function kirim(){
+        var datanim = (document.forms.nim.value);
+        var datanama = (document.forms.nama.value);
+        var datagender = (document.forms.gender.value);
+        var dataagama = (document.forms.agama.value);
+        var datastatus = "";
+        if (forms.menikah.checked == true){
+            datastatus = "Sudah Menikah";
+        }else{
+            datastatus = "Belum Menikah";
+        }
+        document.forms.status1.value = datastatus;
+        var datajurusan = (document.forms.jurusan.value);        
+        var datakomen = (document.forms.Komentar.value);        
+
+        document.forms.nim1.value = datanim;
+        document.forms.nama1.value = datanama;
+        document.forms.gender1.value = datagender;
+        document.forms.agama1.value = dataagama;
+        document.forms.jurusan1.value = datajurusan;
+        document.forms.Komentar1.value = datakomen;
+
+    }
+    </script>
+
+    <form name="forms">
+        <table>
+            <tr>
+                <td colspan="5">
+                <h3>Masukkan Data Mahasiswa</h3>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">NIM</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="nim"></td>
+            </tr>
+            <tr>
+                <td width="20%">Nama</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="nama"></td>
+            </tr>
+            <tr>
+                <td width="20%">Jenis Kelamin</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%">
+                    <select name="gender">
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">Agama</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%">
+                    <select name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Khatolik">Khatolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghu cu">Konghu Cu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">Status</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="radio" value="menikah" name="menikah">Menikah</td>
+            </tr>
+            <tr>
+                <td width="20%">Jurusan</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%">
+                    <select name="jurusan">
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">Komentar</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><textarea name="Komentar" rows="4" cols="25"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onclick="kirim()">
+                <input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td colspan="5">
+                <h3>Data Mahasiswa</h3>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">NIM</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="nim1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Nama</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="nama1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Jenis Kelamin</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="gender1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Agama</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="agama1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Status</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" name="status1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Jurusan</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><input type="text" size="15" name="jurusan1"></td>
+            </tr>
+            <tr>
+                <td width="20%">Komentar</td>
+                <td width="5%" align="center">:</td>
+                <td width="55%"><textarea rows="4" cols="25" name="Komentar1"></textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
